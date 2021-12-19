@@ -13,6 +13,12 @@
 		9A5D84AE276D56F2004A06FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5D84AC276D56F2004A06FE /* Main.storyboard */; };
 		9A5D84B0276D56F3004A06FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5D84AF276D56F3004A06FE /* Assets.xcassets */; };
 		9A5D84B3276D56F3004A06FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A5D84B1276D56F3004A06FE /* LaunchScreen.storyboard */; };
+		9A5D84BB276D571B004A06FE /* StarwarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84BA276D571B004A06FE /* StarwarsModel.swift */; };
+		9A5D84BD276D5727004A06FE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84BC276D5727004A06FE /* APIService.swift */; };
+		9A5D84BF276D5775004A06FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84BE276D5775004A06FE /* HomeView.swift */; };
+		9A5D84C5276D5935004A06FE /* StarwarsEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84C4276D5935004A06FE /* StarwarsEventViewModel.swift */; };
+		9A5D84C8276D6C12004A06FE /* StarWarsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84C7276D6C12004A06FE /* StarWarsTableViewDataSource.swift */; };
+		9A5D84CA276D6F16004A06FE /* StarWarsTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5D84C9276D6F16004A06FE /* StarWarsTableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		9A5D84AF276D56F3004A06FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A5D84B2276D56F3004A06FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A5D84B4276D56F3004A06FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A5D84BA276D571B004A06FE /* StarwarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsModel.swift; sourceTree = "<group>"; };
+		9A5D84BC276D5727004A06FE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9A5D84BE276D5775004A06FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9A5D84C4276D5935004A06FE /* StarwarsEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsEventViewModel.swift; sourceTree = "<group>"; };
+		9A5D84C7276D6C12004A06FE /* StarWarsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTableViewDataSource.swift; sourceTree = "<group>"; };
+		9A5D84C9276D6F16004A06FE /* StarWarsTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTableViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,69 @@
 		9A5D84A5276D56F2004A06FE /* Phunware App */ = {
 			isa = PBXGroup;
 			children = (
-				9A5D84A6276D56F2004A06FE /* AppDelegate.swift */,
-				9A5D84A8276D56F2004A06FE /* SceneDelegate.swift */,
-				9A5D84AA276D56F2004A06FE /* ViewController.swift */,
+				9A5D84CB276D6F24004A06FE /* TableViewCells */,
+				9A5D84C6276D593C004A06FE /* ViewModels */,
+				9A5D84C3276D57D2004A06FE /* Models */,
+				9A5D84C2276D57C6004A06FE /* WebService */,
+				9A5D84C1276D57BC004A06FE /* Controllers */,
+				9A5D84C0276D57A1004A06FE /* Common */,
 				9A5D84AC276D56F2004A06FE /* Main.storyboard */,
 				9A5D84AF276D56F3004A06FE /* Assets.xcassets */,
 				9A5D84B1276D56F3004A06FE /* LaunchScreen.storyboard */,
 				9A5D84B4276D56F3004A06FE /* Info.plist */,
 			);
 			path = "Phunware App";
+			sourceTree = "<group>";
+		};
+		9A5D84C0276D57A1004A06FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84A6276D56F2004A06FE /* AppDelegate.swift */,
+				9A5D84A8276D56F2004A06FE /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9A5D84C1276D57BC004A06FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84AA276D56F2004A06FE /* ViewController.swift */,
+				9A5D84BE276D5775004A06FE /* HomeView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9A5D84C2276D57C6004A06FE /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84BC276D5727004A06FE /* APIService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		9A5D84C3276D57D2004A06FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84BA276D571B004A06FE /* StarwarsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A5D84C6276D593C004A06FE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84C4276D5935004A06FE /* StarwarsEventViewModel.swift */,
+				9A5D84C7276D6C12004A06FE /* StarWarsTableViewDataSource.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A5D84CB276D6F24004A06FE /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9A5D84C9276D6F16004A06FE /* StarWarsTableViewCells.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A5D84AB276D56F2004A06FE /* ViewController.swift in Sources */,
+				9A5D84BD276D5727004A06FE /* APIService.swift in Sources */,
+				9A5D84BB276D571B004A06FE /* StarwarsModel.swift in Sources */,
+				9A5D84C8276D6C12004A06FE /* StarWarsTableViewDataSource.swift in Sources */,
+				9A5D84CA276D6F16004A06FE /* StarWarsTableViewCells.swift in Sources */,
+				9A5D84C5276D5935004A06FE /* StarwarsEventViewModel.swift in Sources */,
+				9A5D84BF276D5775004A06FE /* HomeView.swift in Sources */,
 				9A5D84A7276D56F2004A06FE /* AppDelegate.swift in Sources */,
 				9A5D84A9276D56F2004A06FE /* SceneDelegate.swift in Sources */,
 			);
